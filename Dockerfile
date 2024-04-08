@@ -1,7 +1,9 @@
 FROM node:12.2.0-alpine
+FROM ubuntu
 WORKDIR app
-COPY . .
 RUN npm install
 RUN npm run test
-EXPOSE 8000
+RUN apt-get install apache2 -y
+COPY . /var/www/html/
 CMD ["node","app.js"]
+ENTRYPOINT apachectl -D FOREGROUND
