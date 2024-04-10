@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: mehar221/myproject1
+        image: mehar221/myproject1:latest
         ports:
         - containerPort: 80
