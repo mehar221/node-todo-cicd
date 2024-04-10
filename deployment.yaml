@@ -15,7 +15,7 @@ spec:
         app: myproject
     spec:
       containers:
-      - name: nginx
+      - name: mycontainer
         image: mehar221/myproject1:latest
         ports:
         - containerPort: 80
